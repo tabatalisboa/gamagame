@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190627060856) do
+ActiveRecord::Schema.define(version: 20190627061346) do
+
+  create_table "games", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "external_id"
